@@ -1,0 +1,77 @@
+[
+    {
+        "item_name": "Paneer Butter Masala",
+        "cuisine": "North Indian",
+        "prices": 250.0
+    },
+    {
+        "item_name": "Masala Dosa",
+        "cuisine": "South Indian",
+        "prices": 180.0
+    },
+    {
+        "item_name": "Chole Bhature",
+        "cuisine": "North Indian",
+        "prices": 200.0
+    },
+    {
+        "item_name": "Veg Hakka Noodles",
+        "cuisine": "Chinese",
+        "prices": 160.0
+    },
+    {
+        "item_name": "Manchurian Gravy",
+        "cuisine": "Chinese",
+        "prices": 170.0
+    },
+    {
+        "item_name": "Dal Tadka",
+        "cuisine": "Punjabi",
+        "prices": 140.0
+    },
+    {
+        "item_name": "Mushroom Matar",
+        "cuisine": "Street Food",
+        "prices": 220.0
+    },
+    {
+        "item_name": "Pav Bhaji",
+        "cuisine": "Street Food",
+        "prices": 130.0
+    },
+    {
+        "item_name": "Biryani",
+        "cuisine": "Hyderabadi",
+        "prices": 280.0
+    },
+    {
+        "item_name": "Gulab Jamun",
+        "cuisine": "Dessert",
+        "prices": 100.0
+    },
+    {
+        "item_name": "Rasgulla",
+        "cuisine": "Dessert",
+        "prices": 90.0
+    },
+    {
+        "item_name": "Veg Pulao",
+        "cuisine": "North Indian",
+        "prices": 150.0
+    },
+    {
+        "item_name": "Idli Sambhar",
+        "cuisine": "South Indian",
+        "prices": 120.0
+    },
+    {
+        "item_name": "Tandoori Roti",
+        "cuisine": "North Indian",
+        "prices": 25.0
+    },
+    {
+        "item_name": "Butter Naan",
+        "cuisine": "North Indian",
+        "prices": 35.0
+    }
+]

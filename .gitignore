@@ -57,7 +57,6 @@ Thumbs.db
 .env
 .env.*
 *.secret
-*.json
 token.txt
 config.json
 credentials.json

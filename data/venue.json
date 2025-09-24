@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Royal Banquet Hall",
+    "city": "Ahmedabad",
+    "capacity": 500,
+    "budget": 800000,
+    "style": "Banquet",
+    "link": "http://dummy.com/royal"
+  },
+  {
+    "name": "Heritage Garden",
+    "city": "Ahmedabad",
+    "capacity": 1000,
+    "budget": 1200000,
+    "style": "Resort",
+    "link": "http://dummy.com/heritage"
+  },
+  {
+    "name": "Sunset Resort",
+    "city": "Surat",
+    "capacity": 300,
+    "budget": 600000,
+    "style": "Resort",
+    "link": "http://dummy.com/sunset"
+  },
+  {
+    "name": "Diamond Banquet",
+    "city": "Ahmedabad",
+    "capacity": 700,
+    "budget": 950000,
+    "style": "Banquet",
+    "link": "http://dummy.com/diamond"
+  },
+  {
+    "name": "Lotus Convention Center",
+    "city": "Vadodara",
+    "capacity": 1200,
+    "budget": 1500000,
+    "style": "Banquet",
+    "link": "http://dummy.com/lotus"
+  },
+  {
+    "name": "Palm Beach Resort",
+    "city": "Diu",
+    "capacity": 400,
+    "budget": 700000,
+    "style": "Resort",
+    "link": "http://dummy.com/palmbeach"
+  },
+  {
+    "name": "Green Meadows",
+    "city": "Surat",
+    "capacity": 900,
+    "budget": 1100000,
+    "style": "Resort",
+    "link": "http://dummy.com/greenmeadows"
+  },
+  {
+    "name": "Crystal Palace",
+    "city": "Ahmedabad",
+    "capacity": 600,
+    "budget": 850000,
+    "style": "Banquet",
+    "link": "http://dummy.com/crystal"
+  },
+  {
+    "name": "Riverside Pavilion",
+    "city": "Rajkot",
+    "capacity": 750,
+    "budget": 1000000,
+    "style": "Resort",
+    "link": "http://dummy.com/riverside"
+  },
+  {
+    "name": "Blue Lagoon Resort",
+    "city": "Surat",
+    "capacity": 500,
+    "budget": 900000,
+    "style": "Resort",
+    "link": "http://dummy.com/bluelagoon"
+  },
+  {
+    "name": "Galaxy Banquets",
+    "city": "Ahmedabad",
+    "capacity": 800,
+    "budget": 1050000,
+    "style": "Banquet",
+    "link": "http://dummy.com/galaxy"
+  },
+  {
+    "name": "Sunrise Gardens",
+    "city": "Vadodara",
+    "capacity": 1000,
+    "budget": 1250000,
+    "style": "Resort",
+    "link": "http://dummy.com/sunrise"
+  },
+  {
+    "name": "Royal Orchid Resort",
+    "city": "Ahmedabad",
+    "capacity": 450,
+    "budget": 750000,
+    "style": "Resort",
+    "link": "http://dummy.com/royalorchid"
+  },
+  {
+    "name": "Silver Leaf Hall",
+    "city": "Surat",
+    "capacity": 550,
+    "budget": 800000,
+    "style": "Banquet",
+    "link": "http://dummy.com/silverleaf"
+  },
+  {
+    "name": "Paradise Lawns",
+    "city": "Rajkot",
+    "capacity": 1200,
+    "budget": 1400000,
+    "style": "Resort",
+    "link": "http://dummy.com/paradise"
+  }
+]
