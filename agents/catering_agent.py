@@ -14,7 +14,18 @@ def catering_agent_node(state: WeddingState) -> dict:
 
 # Call the executor
     result = catering_agent.invoke({"input": state["query"]})
-    return {"response": result,
-            "messages": state.get("messages", []) + result["messages"]}
 
-        # return "catering agent okay"
+     # If result is a dict, extract the string
+    if isinstance(result, dict):
+        response_text = result.get("output") or str(result)
+    else:
+        response_text = str(result)
+
+        # Update messages
+    updated_messages = state.get("messages", []) + [{"role": "assistant", "content": response_text}]
+
+    return {"response": response_text, "messages": updated_messages}
+    # return {"response": result,
+    #         "messages": state.get("messages", []) + result["messages"]}
+
+    

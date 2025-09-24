@@ -23,11 +23,13 @@ def venue_agent_node(state: WeddingState) -> dict:
     )
     result = venue_agent.invoke({"input": state["query"]})
    
+    # return {
+    #     "response": result.get("output", result.get("response", "No response from venue agent")),
+    #     "messages": state.get("messages", []) + [result]  # Simplified message handling
+    # }
     return {
-        "response": result.get("output", result.get("response", "No response from venue agent")),
-        "messages": state.get("messages", []) + [result]  # Simplified message handling
-    }
-#     return {
-#     "response": result["output"],
-#     "messages": state.get("messages", []) + result.get("messages", [])
-# }
+    "response": result["output"],
+    "messages": state.get("messages", []) + result.get("messages", [])
+}
+
+
