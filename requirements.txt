@@ -1,0 +1,11 @@
+langgraph
+duckduckgo-search
+python-dotenv
+openai
+langchain-openai
+langchain-community
+streamlit
+langchain 
+langchain-openai
+loguru 
+langchain-tavily
