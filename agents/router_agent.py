@@ -60,6 +60,7 @@ def classify_intent(state: WeddingState) -> WeddingState:
         # Ensure valid category
     if category.content not in agents:
             category = "general"
-        
+
+
     return {"intent":category.content}
 
