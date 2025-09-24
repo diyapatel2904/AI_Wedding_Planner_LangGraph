@@ -15,4 +15,5 @@ dependencies = [
     "openai>=1.109.1",
     "python-dotenv>=1.1.1",
     "streamlit>=1.50.0",
+    "tavily-python>=0.7.12",
 ]

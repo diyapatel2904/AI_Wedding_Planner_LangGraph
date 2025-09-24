@@ -314,6 +314,7 @@ dependencies = [
     { name = "openai" },
     { name = "python-dotenv" },
     { name = "streamlit" },
+    { name = "tavily-python" },
 ]
 
 [package.metadata]
@@ -328,6 +329,7 @@ requires-dist = [
     { name = "openai", specifier = ">=1.109.1" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "streamlit", specifier = ">=1.50.0" },
+    { name = "tavily-python", specifier = ">=0.7.12" },
 ]
 
 [[package]]
@@ -2421,6 +2423,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/d6/f6/f7d3a0146577c1918439d3163707040f7111a7d2e7e2c73fa7adeb169c06/streamlit-1.50.0.tar.gz", hash = "sha256:87221d568aac585274a05ef18a378b03df332b93e08103fffcf3cd84d852af46", size = 9664808, upload-time = "2025-09-23T19:24:00.31Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2a/38/991bbf9fa3ed3d9c8e69265fc449bdaade8131c7f0f750dbd388c3c477dc/streamlit-1.50.0-py3-none-any.whl", hash = "sha256:9403b8f94c0a89f80cf679c2fcc803d9a6951e0fba542e7611995de3f67b4bb3", size = 10068477, upload-time = "2025-09-23T19:23:57.245Z" },
+]
+
+[[package]]
+name = "tavily-python"
+version = "0.7.12"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "requests" },
+    { name = "tiktoken" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3e/42/ce2329635b844dda548110a5dfa0ab5631cdc1085e15c2d68b1850a2d112/tavily_python-0.7.12.tar.gz", hash = "sha256:661945bbc9284cdfbe70fb50de3951fd656bfd72e38e352481d333a36ae91f5a", size = 17282, upload-time = "2025-09-10T17:02:01.281Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9a/e2/dbc246d9fb24433f77b17d9ee4e750a1e2718432ebde2756589c9154cbad/tavily_python-0.7.12-py3-none-any.whl", hash = "sha256:00d09b9de3ca02ef9a994cf4e7ae43d4ec9d199f0566ba6e52cbfcbd07349bd1", size = 15473, upload-time = "2025-09-10T17:01:59.859Z" },
 ]
 
 [[package]]
