@@ -50,33 +50,21 @@ def fashion_agent_node(state: WeddingState) -> dict:
         )
     )
 
-    try:
-        # For fashion agent, we might want to include conversation context
-        agent_input = {"input": state["query"]}
-        if state.get('messages'):
-            agent_input["messages"] = state['messages']
-            
-        result = fashion_agent.invoke(agent_input)
+    agent_input = {"input": state["query"]}
+    if state.get('messages'):
+        agent_input["messages"] = state['messages']
         
-        logger.info(f"result from fashion agent{result['messages'][-1]}")
-        
-        response_text = result["messages"][-1].content
-        
-        # Add messages directly to the existing state messages
-        state['messages'].append(HumanMessage(content=state["query"]))
-        state['messages'].append(AIMessage(content=response_text))
-        
-        return {
-            "response": response_text
-        }
-    except Exception as e:
-        logger.error(f"Fashion agent error: {e}")
-        error_msg = f"Sorry, I encountered an error with fashion search: {str(e)}"
-        
-        # Add error messages to state
-        state['messages'].append(HumanMessage(content=state["query"]))
-        state['messages'].append(AIMessage(content=error_msg))
-        
-        return {
-            "response": error_msg
-        }
+    result = fashion_agent.invoke(agent_input)
+    
+    logger.info(f"result from fashion agent{result['messages'][-1]}")
+    
+    response_text = result["messages"][-1].content
+    
+    # Add messages directly to the existing state messages
+    state['messages'].append(HumanMessage(content=state["query"]))
+    state['messages'].append(AIMessage(content=response_text))
+    
+    return {
+        "response": response_text
+    }
+    

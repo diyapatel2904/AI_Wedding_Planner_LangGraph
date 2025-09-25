@@ -40,25 +40,15 @@ def venue_agent_node(state: WeddingState) -> dict:
         verbose=True
     )
     
-    try:
-        result = venue_agent.invoke({"input": state["query"]})
-        response_text = result.get("output", "No response from venue agent")
-        
-        # Add messages directly to the existing state messages
-        state['messages'].append(HumanMessage(content=state["query"]))
-        state['messages'].append(AIMessage(content=response_text))
-        
-        return {
-            "response": response_text
-        }
-    except Exception as e:
-        logger.error(f"Venue agent error: {e}")
-        error_msg = f"Sorry, I encountered an error with venue search: {str(e)}"
-        
-        # Add error messages to state
-        state['messages'].append(HumanMessage(content=state["query"]))
-        state['messages'].append(AIMessage(content=error_msg))
-        
-        return {
-            "response": error_msg
-        }
+
+    result = venue_agent.invoke({"input": state["query"]})
+    response_text = result.get("output", "No response from venue agent")
+    
+    # Add messages directly to the existing state messages
+    state['messages'].append(HumanMessage(content=state["query"]))
+    state['messages'].append(AIMessage(content=response_text))
+    
+    return {
+        "response": response_text
+    }
+    

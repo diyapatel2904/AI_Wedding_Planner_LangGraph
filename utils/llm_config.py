@@ -7,7 +7,7 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 def get_llm(
-    model_name: str = "gpt-4",
+    model_name: str = "gpt-4.1-mini-2025-04-14",
     temperature: float = 0.3,
     max_tokens: int = 512
 ):

@@ -1,6 +1,7 @@
 
 # from langchain.chat_models import ChatOpenAI
 from loguru import logger
+from langchain.schema import AIMessage, HumanMessage
 from utils.llm_config import llm
 from dotenv import load_dotenv
 from prompt.router_prompt import router_prompt
@@ -38,7 +39,7 @@ agents = {
 #     except Exception as e:
 #         logger.exception(f"Error in router_agent: {e}")
 #         return {"selected_agent": None}
-
+# ----------------------------------------------
 def classify_intent(state: WeddingState) -> WeddingState:
     """
     Router agent node that classifies the query intent using LLM
@@ -52,8 +53,8 @@ def classify_intent(state: WeddingState) -> WeddingState:
 
         # category = llm(router_prompt.format(query=state["query"])).strip().lower()
     chain = router_prompt | llm
-    category =  chain.invoke({"query":state["query"]})
-    print(category)
+    category =  chain.invoke({"query":state["query"],"chat_history":state["messages"][-6:]})
+    logger.info(f"history :{state['messages'][-6:]}")
         
     logger.info(f"category : {category}")
 
@@ -61,6 +62,4 @@ def classify_intent(state: WeddingState) -> WeddingState:
     if category.content not in agents:
             category = "general"
 
-
     return {"intent":category.content}
-

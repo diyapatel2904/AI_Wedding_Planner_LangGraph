@@ -43,11 +43,7 @@ def general_agent_node(state: WeddingState) -> dict:
     General agent node that handles queries which do not fall under
     fashion, venue, or catering. Uses LLM with a general-purpose prompt.
     """
-    logger.info("Processing general query...")
-    
     try:
-        # Build chain (prompt + LLM) - but first check if we should use conversation history
-        # For memory-aware responses, we can pass the full message history to LLM
         if state.get('messages'):
             # Use the LLM with full conversation context
             response = llm.invoke(state['messages'] + [HumanMessage(content=state["query"])])
@@ -66,7 +62,7 @@ def general_agent_node(state: WeddingState) -> dict:
             "response": response.content
         }
     except Exception as e:
-        logger.error(f"General agent error: {e}")
+        
         error_msg = f"Sorry, I encountered an error: {str(e)}"
         
         # Add error messages to state

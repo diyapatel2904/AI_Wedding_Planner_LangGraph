@@ -15,7 +15,7 @@ build/
 # =========================
 # Virtual Environments
 # =========================
-lang_env/
+venv/
 ENV/
 env/
 .conda/
