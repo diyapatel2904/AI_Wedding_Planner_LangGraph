@@ -9,37 +9,18 @@ from agents.fashion_agent import fashion_agent_node
 from agents.venue_agent import venue_agent_node
 from agents.catering_agent import catering_agent_node
 from agents.general_agent import general_agent_node
+from agents.photo_agent import photographer_agent_node
 from state import WeddingState
-
 
 # Dictionary of agents
 agents = {
     "fashion": fashion_agent_node,
     "venue": venue_agent_node,
     "catering": catering_agent_node,
-    "general": general_agent_node
+    "general": general_agent_node,
+    "photographer":photographer_agent_node,
 }
 
-# def classify_intent(state: WeddingState) -> dict:
-#     """
-#     Router agent that classifies a query and returns the selected agent's name.
-#     """
-#     try:
-#         # Classify the query using LLM
-#         category = llm(router_prompt.format(query=state["query"])).content.strip().lower()
-
-#         # Check if an agent exists for this category
-#         if category not in agents:
-#             return {"selected_agent": "general"}  # fallback if no matching agent
-
-#         # Return only the agent name, not the result
-#         state["intent"] = category
-#         return {"selected_agent": category}
-
-#     except Exception as e:
-#         logger.exception(f"Error in router_agent: {e}")
-#         return {"selected_agent": None}
-# ----------------------------------------------
 def classify_intent(state: WeddingState) -> WeddingState:
     """
     Router agent node that classifies the query intent using LLM

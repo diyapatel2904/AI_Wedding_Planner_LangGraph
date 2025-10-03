@@ -7,3 +7,4 @@ class WeddingState(TypedDict):
     intent: str     # What kind of request it is (fashion, venue, etc.)
     response: str 
     messages: Annotated[list, add_messages]
+    

@@ -6,7 +6,9 @@ from agents.catering_agent import catering_agent_node
 from agents.fashion_agent import fashion_agent_node
 from agents.venue_agent import venue_agent_node
 from agents.general_agent import general_agent_node
+from agents.photo_agent import photographer_agent_node
 from langgraph.checkpoint.memory import InMemorySaver
+
 # from langchain_core.runnables import RunnableConfig
 
 def build_workflow():
@@ -23,7 +25,7 @@ def build_workflow():
     graph_builder.add_node("venue", venue_agent_node)
     graph_builder.add_node("catering", catering_agent_node)
     graph_builder.add_node("general", general_agent_node)
-
+    graph_builder.add_node("photographer_agent", photographer_agent_node)
     # Set entry point
     graph_builder.set_entry_point("router")
 
@@ -36,6 +38,7 @@ def build_workflow():
             "venue": "venue",
             "catering": "catering",
             "general": "general",
+            "photographer":"photographer_agent"
         },
     )
 
@@ -44,6 +47,7 @@ def build_workflow():
     graph_builder.add_edge("venue", END)
     graph_builder.add_edge("catering", END)
     graph_builder.add_edge("general", END)
+    graph_builder.add_edge("photographer_agent", END)
 
     logger.info("Wedding Planner workflow built successfully.")
     # graph = graph_builder.compile() 

@@ -6,11 +6,13 @@ Classify the user's query into one of the following categories:
 - fashion: wedding outfits, attire, dress, suit,kurta, shervani, groom outfit, bride dress, styling
 - venue: location, hall, place, resort, banquet, venue
 - catering: food, menu, catering, dining, cuisine, restaurant, meals
+- photographer: photography, photos, cameraman, wedding shoot, pre-wedding, candid, video, album, photo package
 
 If it doesn't match any category, reply with 'general'.
 
 Rules:
-- If user asks for "more options", "alternatives", "same" - use the category from previous conversation
+- If user asks for "more options", "alternatives", "same" 
+- use the category from previous conversation
 - Consider follow-up context from chat history
 -Output only the category.
 chat_history={chat_history}

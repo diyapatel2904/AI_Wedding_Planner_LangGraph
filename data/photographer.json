@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Shutter Stories",
+    "city": "Ahmedabad",
+    "contact": "shutterstories@gmail.com",
+    "budget": 150000
+  },
+  {
+    "name": "Golden Hour Studios",
+    "city": "Ahmedabad",
+    "contact": "goldenhour@gmail.com",
+    "budget": 180000
+  },
+  {
+    "name": "Candid Frames",
+    "city": "Ahmedabad",
+    "contact": "candidframes@gmail.com",
+    "budget": 200000
+  },
+  {
+    "name": "Royal Lens",
+    "city": "Ahmedabad",
+    "contact": "royallens@gmail.com",
+    "budget": 170000
+  },
+ 
+  {
+    "name": "LensCraft Photography",
+    "city": "Surat",
+    "contact": "lenscraftsurat@gmail.com",
+    "budget": 120000
+  },
+  {
+    "name": "Pixel Perfect Moments",
+    "city": "Surat",
+    "contact": "pixelperfect@gmail.com",
+    "budget": 135000
+  },
+  {
+    "name": "Artistic Memories",
+    "city": "Surat",
+    "contact": "artisticmemories@gmail.com",
+    "budget": 145000
+  },
+  {
+    "name": "Wedding Vision Studio",
+    "city": "Surat",
+    "contact": "weddingvision@gmail.com",
+    "budget": 160000
+  },
+ 
+  {
+    "name": "Wedding Tales",
+    "city": "Vadodara",
+    "contact": "weddingtalesvdo@gmail.com",
+    "budget": 160000
+  },
+  {
+    "name": "Frame Factory",
+    "city": "Vadodara",
+    "contact": "framefactory@gmail.com",
+    "budget": 175000
+  },
+  {
+    "name": "Elegant Shots",
+    "city": "Vadodara",
+    "contact": "elegantshots@gmail.com",
+    "budget": 190000
+  },
+  {
+    "name": "Classic Clickers",
+    "city": "Vadodara",
+    "contact": "classicclickers@gmail.com",
+    "budget": 170000
+  },
+ 
+  {
+    "name": "Dream Clicks",
+    "city": "Rajkot",
+    "contact": "dreamclicksrajkot@gmail.com",
+    "budget": 140000
+  },
+  {
+    "name": "Memories by Light",
+    "city": "Rajkot",
+    "contact": "memorieslight@gmail.com",
+    "budget": 155000
+  },
+  {
+    "name": "Royal Wedding Shoots",
+    "city": "Rajkot",
+    "contact": "royalweddings@gmail.com",
+    "budget": 165000
+  },
+  {
+    "name": "Forever Frames",
+    "city": "Rajkot",
+    "contact": "foreverframes@gmail.com",
+    "budget": 150000
+  },
+ 
+  {
+    "name": "Beachside Frames",
+    "city": "Diu",
+    "contact": "beachsideframes@gmail.com",
+    "budget": 130000
+  },
+  {
+    "name": "Seaside Studios",
+    "city": "Diu",
+    "contact": "seasidestudios@gmail.com",
+    "budget": 145000
+  },
+  {
+    "name": "Ocean View Captures",
+    "city": "Diu",
+    "contact": "oceanviewcaptures@gmail.com",
+    "budget": 155000
+  },
+  {
+    "name": "Island Memories",
+    "city": "Diu",
+    "contact": "islandmemories@gmail.com",
+    "budget": 140000
+  }
+]
