@@ -70,7 +70,7 @@ def photographer_agent_node(state: WeddingState) -> dict:
     results = qdrant.search(
         collection_name="photographers",
         query_vector=query_emb,
-        limit=3  # return top 5 photographers
+        limit=3  # return top 3 photographers
     )
 
     # Format results
@@ -84,20 +84,24 @@ def photographer_agent_node(state: WeddingState) -> dict:
     response_text = "\n".join(suggestions)
 
     # Add to conversation history
-    state["messages"].append({"role": "assistant", "content": response_text})
-    return state
-
-
-if __name__ == "__main__":
-    # Initialize state with a user query
-    state = {
-        "query": "Find photographers in surat under 150000",
-        "messages": []  # conversation history
+    state["messages"].append(HumanMessage(content=query))
+    state["messages"].append(AIMessage(content=response_text))
+    # state["messages"].append({"role": "assistant", "content": response_text})
+    return {
+        "response": response_text
     }
 
-    # Call your agent node
-    final_state = photographer_agent_node(state)
 
-    # Print the assistant's response
-    print("Assistant Response:\n")
-    print(final_state["messages"][-1]["content"])
+# if __name__ == "__main__":
+#     # Initialize state with a user query
+#     state = {
+#         "query": "Find photographers in surat under 150000",
+#         "messages": []  # conversation history
+#     }
+
+#     # Call your agent node
+#     final_state = photographer_agent_node(state)
+
+#     # Print the assistant's response
+#     print("Assistant Response:\n")
+#     print(final_state["messages"][-1]["content"])
