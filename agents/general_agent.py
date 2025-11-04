@@ -1,5 +1,5 @@
 # from langchain.chat_models import ChatOpenAI
-from langchain.schema import AIMessage, HumanMessage
+from langchain_core.messages import AIMessage, HumanMessage
 from loguru import logger
 from utils.llm_config import llm
 from state import WeddingState
@@ -41,7 +41,7 @@ from prompt.general_prompt import general_prompt
 def general_agent_node(state: WeddingState) -> dict:
     """
     General agent node that handles queries which do not fall under
-    fashion, venue, or catering. Uses LLM with a general-purpose prompt.
+    fashion, venue,photographer or catering. Uses LLM with a general-purpose prompt.
     """
     try:
         if state.get('messages'):
@@ -50,7 +50,7 @@ def general_agent_node(state: WeddingState) -> dict:
         else:
             # Fallback to original prompt-based approach
             chain = general_prompt | llm
-            response = chain.invoke({"query": state["query"]})
+            response = chain.invoke({"query":state["query"],"chat_history":state["messages"]})
         
         logger.info(f"General agent response: {response.content}")
         

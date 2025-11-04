@@ -1,4 +1,4 @@
-from langchain.agents import initialize_agent, AgentType
+from langchain.agents import create_agent
 from loguru import logger
 from tools.catering_tool import catering_search
 from utils.llm_config import llm
@@ -34,11 +34,11 @@ from langchain_core.messages import HumanMessage, AIMessage
 def catering_agent_node(state: WeddingState) -> dict:
     logger.info("Processing catering query...")
     
-    tools = [catering_search]
-    catering_agent = initialize_agent(
-        tools, llm, 
-        agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
-        verbose=True
+    catering_agent = create_agent(
+        tools=[catering_search],
+        model=llm,
+        verbose=True,
+        system_prompt="You are a helpful catering search assistant."
     )
     result = catering_agent.invoke({"input": state["query"]})
     response_text = result.get("output", "No response from catering agent")

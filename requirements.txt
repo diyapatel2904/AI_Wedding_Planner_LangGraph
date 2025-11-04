@@ -1,5 +1,4 @@
 langgraph
-duckduckgo-search
 python-dotenv
 openai
 langchain-openai
@@ -8,6 +7,5 @@ streamlit
 langchain 
 langchain-openai
 loguru 
-# langchain-tavily
 tavily-python
 qdrant-client

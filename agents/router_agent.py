@@ -1,7 +1,7 @@
 
 # from langchain.chat_models import ChatOpenAI
 from loguru import logger
-from langchain.schema import AIMessage, HumanMessage
+from langchain_core.messages import AIMessage, HumanMessage
 from utils.llm_config import llm
 from dotenv import load_dotenv
 from prompt.router_prompt import router_prompt

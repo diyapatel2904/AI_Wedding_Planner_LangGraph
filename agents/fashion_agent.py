@@ -4,7 +4,7 @@ from state import WeddingState
 from utils.llm_config import llm
 from tools.fashion_tool import fashion_search
 from prompt.fashion_prompt import fashion_prompt
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from langchain_core.messages import ToolMessage, AIMessage,HumanMessage
 
 # Configure logger
@@ -41,20 +41,20 @@ def fashion_agent_node(state: WeddingState) -> dict:
     Workflow node for the Fashion Agent.
     Runs the fashion agent and extracts only the tool output (URLs).
     """
-    fashion_agent = create_react_agent(
+    fashion_agent = create_agent(
         model=llm,
         tools=[fashion_search],
-        prompt=fashion_prompt.partial(
+        system_prompt=fashion_prompt.partial(
             tools="FashionSearch: Fetch bridal inspirations",
             tool_names="FashionSearch"
         )
     )
 
-    agent_input = {"input": state["query"]}
-    if state.get('messages'):
-        agent_input["messages"] = state['messages']
+    # agent_input = {"input": state["query"]}
+    # if state.get('messages'):
+    #     agent_input["messages"] = state['messages']
         
-    result = fashion_agent.invoke(agent_input)
+    result = fashion_agent.invoke({"query":state["query"],"chat_history":state["messages"]})
     
     logger.info(f"result from fashion agent{result['messages'][-1]}")
     
@@ -68,3 +68,8 @@ def fashion_agent_node(state: WeddingState) -> dict:
         "response": response_text
     }
     
+# The function receives the current state (including the query and chat history).
+# It runs the fashion agent with this context.
+# It logs and extracts the agent’s reply.
+# It updates the chat history with both the user’s and agent’s messages.
+# It returns the agent’s response for further use in the workflow.

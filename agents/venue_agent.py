@@ -1,4 +1,4 @@
-from langchain.agents import initialize_agent, AgentType
+from langchain.agents import create_agent
 from dotenv import load_dotenv
 from utils.llm_config import llm
 from tools.venue_tool import venue_search
@@ -33,14 +33,12 @@ load_dotenv()
 def venue_agent_node(state: WeddingState) -> dict:
     logger.info("Processing venue query...")
     
-    venue_agent = initialize_agent(
+    venue_agent = create_agent(
         tools=[venue_search], 
-        llm=llm,
-        agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-        verbose=True
+        model=llm,
+        verbose=True,
+        system_prompt="You are a helpful venue search assistant."
     )
-    
-
     result = venue_agent.invoke({"input": state["query"]})
     response_text = result.get("output", "No response from venue agent")
     

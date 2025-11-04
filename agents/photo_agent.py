@@ -11,12 +11,12 @@ from langchain_core.messages import HumanMessage, AIMessage
 logger.add("photographer_agent.log", rotation="1 MB", retention="7 days", level="DEBUG")
 
 # # Initialize Qdrant (in-memory; replace with Qdrant URL if needed)
-# qdrant = QdrantClient(":memory:")
+qdrant = QdrantClient(":memory:")
 
 # Connect to Qdrant running in Docker (localhost:6333)
 logger.info("Connecting to Qdrant on localhost:6333...")
 
-qdrant = QdrantClient(url="http://qdrant_db:6333")
+# qdrant = QdrantClient(url="http://qdrant_db:6333")
 
 # Create collection for photographers
 logger.info("Creating collection: photographers")
